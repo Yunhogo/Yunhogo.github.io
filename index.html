@@ -11,7 +11,6 @@
       padding: 0;
       background: #222 url('770533.jpg') no-repeat bottom center;
       background-size: cover;
-      background-attachment: fixed;
       color: #eee;
       position: relative;
     }
@@ -81,6 +80,11 @@
       width: 90%;
       max-width: 500px;
       background: #111;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
     }
     dialog::backdrop {
       background: rgba(0,0,0,0.7);
@@ -113,7 +117,7 @@
     <a href="#tasks">수행평가</a>
     <a href="#growth">성장 기록</a>
     <a href="#gallery">갤러리</a>
-    <a href="itrod.html" target="_blank">자기소개</a>
+    <a href="#profile">자기소개</a>
   </nav>
 
   <main>
@@ -137,25 +141,27 @@
       <img src="https://via.placeholder.com/300x200?text=국어+발표" alt="국어 발표 사진">
       <img src="https://via.placeholder.com/300x200?text=수학+문제풀이" alt="수학 문제풀이 사진">
     </section>
+
+    <section id="profile">
+      <h2>👦 자기소개</h2>
+      <p>안녕하세요, 저는 Daniel입니다. 송도 현송중학교에 다니고 있으며 중학교 2학년입니다.</p>
+      <p>저는 부모님을 정말 많이 사랑합니다. 항상 응원해 주셔서 감사합니다.</p>
+    </section>
   </main>
 
   <footer>
     &copy; 2025 Daniel의 포트폴리오
   </footer>
 
-  <!-- 자동으로 열리는 팝업 -->
-  <dialog id="imagePopup">
-    <img src="pookie.jpeg" alt="Pookie 고양이 사진" class="popup-img">
+  <!-- 항상 열려있는 팝업 (닫기 버튼 추가) -->
+  <dialog id="imagePopup" open>
+    <img src="pookie.jpg" alt="Pookie 고양이 사진" class="popup-img">
     <div class="popup-close" id="closePopup">닫기 ✖</div>
   </dialog>
 
   <script>
     const popup = document.getElementById("imagePopup");
     const closeBtn = document.getElementById("closePopup");
-
-    window.addEventListener("DOMContentLoaded", () => {
-      popup.showModal();
-    });
 
     closeBtn.addEventListener("click", () => {
       popup.close();
