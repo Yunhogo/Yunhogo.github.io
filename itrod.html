@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daniel의 자기소개</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Sans", Arial, sans-serif;
+      background: #1b1b1b;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    header {
+      background: #2c2c2c;
+      width: 100%;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #f5c518;
+    }
+    main {
+      max-width: 800px;
+      padding: 2rem;
+      text-align: center;
+    }
+    main h2 {
+      color: #f5c518;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .achievements {
+      background: #2c2c2c;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .achievements ul {
+      list-style: none;
+      padding: 0;
+    }
+    .achievements li::before {
+      content: "🏆 ";
+      color: #f5c518;
+    }
+    .basketball {
+      margin-bottom: 2rem;
+    }
+    .basketball img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      background: #2c2c2c;
+      color: #aaa;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daniel의 자기소개</h1>
+    <p>송도 현송중학교 | 2학년</p>
+  </header>
+
+  <main>
+    <h2>🌟 나에 대해서</h2>
+    <div class="intro">
+      안녕하세요, 저는 송도 현송중학교 2학년에 재학 중인 Daniel입니다.<br/>
+      저는 농구를 정말 좋아하며 운동을 통해 자신감을 얻습니다.<br/>
+      또한 다양한 분야에서 열심히 노력해 여러 상을 받았습니다.
+    </div>
+
+    <div class="achievements">
+      <h3>🏅 수상 경력</h3>
+      <ul>
+        <li>학교 그림 대회 수상</li>
+        <li>논술 대회 우수상</li>
+        <li>영어 발표 대회 장려상</li>
+      </ul>
+    </div>
+
+    <div class="basketball">
+      <h2>🏀 내가 좋아하는 농구</h2>
+      <p>저의 농구 롤모델은 Allen Iverson입니다. 그의 열정과 플레이 스타일에 감명을 받았습니다.</p>
+      <img src="allen_iverson.jpg" alt="Allen Iverson 이미지">
+      <p style="font-size:0.9rem; color:#888;">이미지 파일 경로: allen_iverson.jpg (같은 폴더)</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Daniel의 자기소개 페이지
+  </footer>
+</body>
+</html>

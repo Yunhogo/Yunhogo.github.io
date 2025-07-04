@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daniel의 수행평가 포트폴리오</title>
+  <style>
+    body {
+      font-family: "Noto Sans", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #222 url('770533.jpg') no-repeat bottom center;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #eee;
+      position: relative;
+    }
+    header {
+      background: #333;
+      color: #eee;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #555;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(0,0,0,0.7);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #555;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      position: relative;
+      z-index: 1;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    dialog {
+      border: none;
+      border-radius: 8px;
+      padding: 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+      width: 90%;
+      max-width: 500px;
+      background: #111;
+    }
+    dialog::backdrop {
+      background: rgba(0,0,0,0.7);
+    }
+    .popup-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .popup-close {
+      display: block;
+      text-align: right;
+      padding: 0.5rem 1rem;
+      background: #444;
+      color: #eee;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 0 0 8px 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daniel의 수행평가 포트폴리오</h1>
+    <p>송도 현송중학교 | 중학교 2학년</p>
+  </header>
+
+  <nav>
+    <a href="#tasks">수행평가</a>
+    <a href="#growth">성장 기록</a>
+    <a href="#gallery">갤러리</a>
+    <a href="itrod.html" target="_blank">자기소개</a>
+  </nav>
+
+  <main>
+    <section id="tasks">
+      <h2>📘 수행평가 목록</h2>
+      <ul>
+        <li>국어 수행평가 - 발표 과제 (2025년 5월)</li>
+        <li>수학 수행평가 - 문제 풀이 (2025년 6월)</li>
+        <li>과학 수행평가 - 실험 보고서 (2025년 6월)</li>
+      </ul>
+    </section>
+
+    <section id="growth">
+      <h2>🌱 나의 성장 기록</h2>
+      <p>올해 여러 과제와 활동을 하면서 발표력과 책임감이 많이 성장했습니다. 친구들과 협력하며 과제를 완성할 때 기뻤고, 더 자신감이 생겼습니다.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>🖼️ 갤러리</h2>
+      <p>아래는 수행평가 활동 사진입니다.</p>
+      <img src="https://via.placeholder.com/300x200?text=국어+발표" alt="국어 발표 사진">
+      <img src="https://via.placeholder.com/300x200?text=수학+문제풀이" alt="수학 문제풀이 사진">
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Daniel의 포트폴리오
+  </footer>
+
+  <!-- 자동으로 열리는 팝업 -->
+  <dialog id="imagePopup">
+    <img src="pookie.jpeg" alt="Pookie 고양이 사진" class="popup-img">
+    <div class="popup-close" id="closePopup">닫기 ✖</div>
+  </dialog>
+
+  <script>
+    const popup = document.getElementById("imagePopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      popup.showModal();
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.close();
+    });
+  </script>
+</body>
+</html>
